@@ -16,18 +16,21 @@ var mimeTypes={
 
 http.createServer(function (request, response) {
 	//get the url
+	//if you type http://127.0.0.1:8124/index.html the result will be uri=/index.html
 var uri=url.parse(request.url).pathname;
-  //if you type http://127.0.0.1:8124/index.html the result will be uri=/index.html
+ 
 
-var fileName=path.join(process.cwd(),unescape(uri));
 	//process.cwd() will return current working directory of the process ex for me 
 	// [/Users/bachiri/Desktop/Projects/node.js-Samples/simpleServer]
-var stats;
+var fileName=path.join(process.cwd(),unescape(uri));
+	
 	//this variable will check if the file exist or not 
+var stats;
+	
 
-try{
+try{//Returns an instance of fs.Stats 
 	stats=fs.lstatSync(fileName);
-	//Returns an instance of fs.Stats 
+	
 }catch(e){
 	response.writeHead(404,{'Content-Type':'text/plain'});
 	response.write('404 Not Found');
@@ -35,21 +38,23 @@ try{
 	return;
 } 
 
-// check if it File directory
-//if File
+	// check if it File directory
+	//if File
 if(stats.isFile()){
-	//get The mime type from extension 
+		//get The mime type from extension 
 	var mimeType=mimeTypes[path.extname(fileName).split(".").reverse()[0]];
 	response.writeHead(200,{'Content-Type':mimeType});
 
-	//Create var stream 
+		//Create var stream 
 	var fileStream=fs.createReadStream(fileName);
+	
+
+
 	//Piping streams is taking the output of one stream and feeding it into the input of another.
 	//so from fileStrem to response
-/*	___________         ___________	
-	|fileStream| Pipe()|response   |
-	|__________|===>   |___________|*/
-	
+	/*	___________         ___________	
+		|fileStream| Pipe()|response   |
+		|__________|===>   |___________|*/
 	fileStream.pipe(response);
 
 
@@ -70,11 +75,7 @@ response.writeHead(500,{'Content-Type':'text/plain'});
 
 
 
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.write('process.cwd =>:'+process.cwd());
-  response.write('\n uri :=>'+uri);
-  response.write('\n FileName :=>'+fileName);
-  response.end('\n unescape(uri) :=>'+unescape(uri));
+ 
 }).listen(8124);
 
 console.log('Server running at http://127.0.0.1:8124/');
