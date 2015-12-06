@@ -6,3 +6,12 @@ body {
 .jumbotron{
 	background:url(../images/bw.jpg) no-repeat;
 }
+.footer{
+	background: #99583D;
+	height: 40px;
+	text-align: center;
+	margin-top:30px;
+	padding-top: 10px;
+	overflow: auto;
+
+}

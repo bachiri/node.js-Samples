@@ -1,6 +1,7 @@
 # Express Web site
-To  run this sample  in your computer follow instruction Bellow
+To  run this sample  in your computer follow the instructions Bellow
 
+![](public/images/screen.jpg "Screenshot")
 
 ##Dependencies
 * NPM
