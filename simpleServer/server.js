@@ -61,6 +61,9 @@ if(stats.isFile()){
 
 }//if Directory
 else if (stats.isDirectory()){
+		//if it's a directory we simply redirect it to our index.html
+	response.writeHead(302,{'Location':'index.html'});
+	response.end();
 
 
 
