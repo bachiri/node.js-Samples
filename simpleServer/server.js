@@ -16,14 +16,14 @@ var mimeTypes={
 
 http.createServer(function (request, response) {
 	//get the url
-  var uri=url.parse(request.url).pathname;
-
+var uri=url.parse(request.url).pathname;
   //if you type http://127.0.0.1:8124/index.html the result will be uri=/index.html
+
 var fileName=path.join(process.cwd(),unescape(uri));
-//process.cwd() will return current working directory of the process ex for me 
-// [/Users/bachiri/Desktop/Projects/node.js-Samples/simpleServer]
+	//process.cwd() will return current working directory of the process ex for me 
+	// [/Users/bachiri/Desktop/Projects/node.js-Samples/simpleServer]
 var stats;
-//this variable will check if the file exist or not 
+	//this variable will check if the file exist or not 
 
 try{
 	stats=fs.lstatSync(fileName);
@@ -38,6 +38,20 @@ try{
 // check if it File directory
 //if File
 if(stats.isFile()){
+	//get The mime type from extension 
+	var mimeType=mimeTypes[path.extname(fileName).split(".").reverse()[0]];
+	response.writeHead(200,{'Content-Type':mimeType});
+
+	//Create var stream 
+	var fileStream=fs.createReadStream(fileName);
+	//Piping streams is taking the output of one stream and feeding it into the input of another.
+	//so from fileStrem to response
+/*	___________         ___________	
+	|fileStream| Pipe()|response   |
+	|__________|===>   |___________|*/
+	
+	fileStream.pipe(response);
+
 
 
 }//if Directory
