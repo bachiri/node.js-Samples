@@ -1,7 +1,32 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  script( src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js' )    
-  script( src='javascripts/bootstrap.js')
+	.container
+		.jumbotron
+			h1 Best Watch Collection
+			p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			a.btn.btn-primary.btn-lg(href='#', role='button') Learn more
+		.container
+			.row
+				.col-md-4
+					.thumbnail
+						img(src='images/watch1.jpg', alt='watch1')
+						.caption
+							h2 100 $
+							p Lorem Ipsum is simply dummy text of the printing
+							a.btn.btn-primary.btn-lg(href='#', role='button') Buy
+
+				.col-md-4
+					.thumbnail
+						img(src='images/watch2.jpg', alt='watch2')
+						.caption
+							h2 90 $
+							p Lorem Ipsum is simply dummy text of the printing
+							a.btn.btn-primary.btn-lg(href='#', role='button') Buy
+				.col-md-4
+					.thumbnail
+						img(src='images/watch3.jpg', alt='watch3')
+						.caption
+							h2 102 $
+							p Lorem Ipsum is simply dummy text of the printing
+							a.btn.btn-primary.btn-lg(href='#', role='button') Buy
