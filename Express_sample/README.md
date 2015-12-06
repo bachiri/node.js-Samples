@@ -26,7 +26,7 @@ for exemple you tape express and the name of your application
 ```
 express  Express_sample
 ```
-after creating your app you will have your directory with the express files after that enter 
+after creating your app now install your app  
 ```
 nmp install 
 ```
