@@ -12,6 +12,12 @@ git clone https://github.com/bachiri/node.js-Samples.git
 npm install
 nmp start
 ```
+##Description
+This Express application is capable of 
+* Render Html files 
+* Navigate between pages 
+* Send E-mail using nodeMailer
+
 
 ##More Detail
 
