@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	.container
+		h1 Contact Us 
+		form.form-horizontal(method='post', action='contact/send')
+			.form-group
+				label.col-sm-2.control-label(for='inputName') Name
+				.col-sm-10
+					input#inputName.form-control(type='text', name='name', placeholder='Enter your Name')
+			.form-group
+				label.col-sm-2.control-label(for='inputEmail') E-mail
+				.col-sm-10
+					input#inputEmail.form-control(type='text', name='email', placeholder='Enter your E-mail')
+			.form-group
+				label.col-sm-2.control-label(for='inputmessage') Message
+				.col-sm-10
+					textarea#inputmessage.form-control(name='message', placeholder='Enter Message.....')
+			.form-group
+				.col-sm-offset-2.col-sm-10
+					button.btn.btn-default(type='submit') Send
+			
