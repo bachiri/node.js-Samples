@@ -19,13 +19,15 @@ html
           a.navbar-brand(href='#') Expresss Website        
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.active
-              a(href='#') Home             
-            li
-              a(href='#about') About             
-            li
-              a(href='#contact') Contact
+            li(class=(title === 'Home' ? 'active' : ''))
+              a(href='/') Home             
+            li(class=(title === 'About' ? 'active' : ''))
+              a(href='/about') About             
+            li(class=(title === 'Contact' ? 'active' : ''))
+              a(href='/contact') Contact
     block content
+    footer
+      p &copy; 2015, All right reserved 
     script( src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js' )    
     script( src='javascripts/bootstrap.js')
        
