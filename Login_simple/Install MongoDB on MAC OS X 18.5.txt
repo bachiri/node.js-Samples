@@ -1,0 +1,40 @@
+
+Welcome to MongoDB !Installation 
+
+To Install MongoDB on MAC OS X 18.5 or higher follow me and read what i write so simple and so easy :
+
++Download from mongodb.org/download
+
++Extract to a folder 
+	-open the terminal app 
+	tar xvfz mongodb-osx-x86_64-3.0.7.....
+
++rename the folder mv 
+	-mv mongodb-osx-x86_64-3.0.7 mongodb
+
++create a data folder 
+	-For me i put mongodb folder inside /Users/bachiri/mongodb
+	-and for data file mkdir /Users/bachiri/data
+	-and mkdir /Users/bachiri/data/db
+
++Put the binaries in the Path 
+	-cd /Users/bachiri 
+	-echo "echo "export PATH=$PATH:/Users/bachiri/mongodb/bin" >.bash_profile
+	-Reopen the Terminal
+
++create the mongod configuration file 
+	-copy the sample from github.com/mongodb/mongo/blob/master/rpm/mongod.conf 
+	-open the .bash_profile and change logpath and dbpath with the apropriat path
+
++start mongoooooooooo
+	-mongod -f  /Users/bachiri/mongodb/mongod.conf
+	
++Testttt
+	-mongo
+	-use mydb
+	-db.test.save({a:1})
+	-db.test.find()
+
+
+
+
