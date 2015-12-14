@@ -49,7 +49,7 @@ while ($rows =mysqli_fetch_assoc($run)) { ?>
 			<div class="dropdown">
 				<button class="btn btn-primary" data-toggle="dropdown">Action <span class="caret"></span></button>
 					<ul class="dropdown-menu">
-						<li><a href="javascript:void(0)" onclick="">Edit</a></li>
+						<li><a href="javascript:void(0)" onclick="" data-toggle="modal" data-target=".bs-example-modal-sm">Edit</a></li>
 						<li><a href="javascript:void(0)" onclick="getData('delete_record',<?php echo $rows['id'];?>);">Delete</a></li>
 			
 					</ul>
