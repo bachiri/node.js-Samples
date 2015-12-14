@@ -1,0 +1,927 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sq",
+				"$sql_inst〔variable〕"
+			],
+			[
+				"mys",
+				"mysqli_"
+			],
+			[
+				"st",
+				"$student_name〔variable〕"
+			],
+			[
+				"ad",
+				"add_new_record"
+			],
+			[
+				"mysqli_f",
+				"mysqli_fetch_assoc〔function〕"
+			],
+			[
+				"se",
+				"$server〔variable〕"
+			],
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"te",
+				"$test〔argument〕"
+			],
+			[
+				"get",
+				"get_text"
+			],
+			[
+				"re",
+				"requestPhpData"
+			],
+			[
+				"onke",
+				"onkeypress	Attr"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"bachiri",
+				"bachiri2kech@gmail"
+			],
+			[
+				"contact",
+				"contact1"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"style",
+				"stylesheet"
+			],
+			[
+				"ht",
+				"http"
+			],
+			[
+				"sr",
+				"strong	Tag"
+			],
+			[
+				"print",
+				"print_r〔function〕"
+			],
+			[
+				"m",
+				"$message〔variable〕"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"di",
+				"divMessage"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"new",
+				"newWindow〔variable〕"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"pe",
+				"person2"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"f",
+				"firstName"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"pro",
+				"prompt〔function〕"
+			],
+			[
+				"t",
+				"text"
+			],
+			[
+				"cont",
+				"continue〔keyword〕"
+			],
+			[
+				"php",
+				"php"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<?php \ninclude 'db.php';\nif($_REQUEST['add_new_record']!=''){\n	if ($_REQUEST['add_new_record']=='add_new_record'){\n\n		$student_name=$_REQUEST['name'];\n		$student_subject=$_REQUEST['subject'];\n		$student_fee=$_REQUEST['fee'];\n		$sql_inst=\"Insert into student_record(name,subject,fee) values('$student_name','$student_subject','$student_fee')\";\n		$run_sql=mysqli_query($conn,$sql_inst); \n\n		\n\n\n	}\n\n	else if ($_REQUEST['add_new_record']=='delete_record')\n	{	\n		$id=$_REQUEST['id'];\n		$student_subject=$_REQUEST['subject'];\n		\n\n\n	\n	}\n\n}\n	\n\n\n$sql=\"select * from student_record\";\n$run=mysqli_query($conn,$sql);\nwhile ($rows =mysqli_fetch_assoc($run)) { ?>\n	<tr>\n		<td><?php echo $rows['id'];?></td>\n		<td><?php echo $rows['name'];?></td>\n		<td><?php echo $rows['subject'];?></td>\n		<td><?php echo $rows['fee'];?></td>\n		<td>\n			<div class=\"dropdown\">\n				<button class=\"btn btn-primary\" data-toggle=\"dropdown\">Action <span class=\"caret\"></span></button>\n					<ul class=\"dropdown-menu\">\n						<li><a href=\"javascript:void(0)\" onclick=\"\">Edit</a></li>\n						<li><a href=\"javascript:void(0)\" onclick=\"getData('delete_record',<?php echo $rows['id'];?>);\">Delete</a></li>\n			\n					</ul>\n			</div>\n		</td>				\n	</tr> \n\n	\n\n<?php } ?>			\n\n\n				",
+			"file": "data.php",
+			"file_size": 1163,
+			"file_write_time": 130945693230000000,
+			"settings":
+			{
+				"buffer_size": 1230,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "aw.sublime-project",
+			"settings":
+			{
+				"buffer_size": 231,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/light/Desktop/Notes /Sublime_text_workflow.txt",
+			"settings":
+			{
+				"buffer_size": 1855,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "=> /Applications/MAMP/htdocs/Ajax/data.php\n	|+| 6\n	|+| 7\n	|+| 19\n	|+| 20\n",
+			"settings":
+			{
+				"buffer_size": 73,
+				"line_ending": "Unix",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 167.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"co",
+				"Color Picker"
+			],
+			[
+				"colo",
+				"Color Picker"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"sublimeco",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"seth",
+				"Set Syntax: HTML"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"set",
+				"Set Syntax: PHP"
+			],
+			[
+				"set php",
+				"Set Syntax: PHP"
+			],
+			[
+				"emme",
+				"Set Syntax: Emmet"
+			],
+			[
+				"setp",
+				"Set Syntax: PHP"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"sy",
+				"Set Syntax: PHP"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Applications/MAMP/htdocs/Ajax",
+		"/Users/light/Desktop/Notes "
+	],
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/Ajax/db.php",
+		"/Users/light/Desktop/Notes /WIR.txt",
+		"/Users/light/Desktop/Notes /tools.txt",
+		"/Users/light/Desktop/Notes /Sublime_text_workflow.txt",
+		"/Applications/MAMP/htdocs/Ajax/css/bootstrap.css",
+		"/Users/light/Library/Application Support/Sublime Text 3/Packages/DashDoc/DashDoc.sublime-settings",
+		"/Users/light/Library/Application Support/Sublime Text 3/Packages/User/DashDoc.sublime-settings",
+		"/Applications/MAMP/htdocs/Ajax/.sublime-project",
+		"/Users/light/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/Applications/MAMP/htdocs/Ajax/data.php",
+		"/Volumes/Macbook Pro SSD 2/Tutos/mobile/UDEMY MOBILE APP DESIGN LEARN UX UI AND START FREELANCING CAREER TUTORIAL/11_-_Conclusion/93_-_Congratulations_but_its_not_the_end_.txt",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/.gitignore",
+		"/Users/light/Desktop/Projects/node.js-Samples/Login_sample/.gitignore",
+		"/Users/light/Desktop/Projects/node.js-Samples/Login_simple/Install MongoDB on MAC OS X 18.5.txt",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/views/contact.jade",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/public/stylesheets/style.css",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/views/layout.jade",
+		"/Users/light/Desktop/Projects/node.js-Samples/simpleServer/index.html",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/views/index.jade",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/app.js",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/views/about.jade",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/routes/info.js",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/views/info.jade",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/routes/about.js",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/routes/contact1.js",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/routes/contact.js",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/routes/index.js",
+		"/Users/light/Desktop/Projects/node.js-Samples/init.sh",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/README.md",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/package.json",
+		"/Users/light/Desktop/Projects/node.js-Samples/Express_sample/node_modules/body-parser/package.json",
+		"/Users/light/Desktop/Test.sh",
+		"/Users/light/Desktop/Projects/simpleServer/server.js",
+		"/Users/light/Desktop/Projects/simpleServer/package.json",
+		"/Users/light/Desktop/Projects/server.js",
+		"/Users/light/Desktop/WIR.txt",
+		"/Users/light/Desktop/RITM/S2/web/FINALVERSION/TheFinder_v1/admin/tcpdf/cache/chapter_demo_1.txt",
+		"/Volumes/Macbook Pro SSD 2/torrfil/Adobe After Effects CC 2014 (MAC) (64 bit) [ChingLiu]/Keygen X-Force/disable_activation_osx",
+		"/Users/light/Desktop/login/css/style.css",
+		"/Users/light/Desktop/Desktop/css/reset.css",
+		"/Users/light/Downloads/Thématiques 2015.json",
+		"/Applications/MAMP/htdocs/actus/actus.sql",
+		"/Applications/MAMP/htdocs/PHP/Database.php",
+		"/Applications/MAMP/htdocs/PHP/helloagain.php",
+		"/Applications/MAMP/htdocs/24hourJS/lesson9-window-Object/lesson9.js",
+		"/Applications/MAMP/htdocs/24hourJS/lesson13-DOM/lesson13.js",
+		"/Applications/MAMP/htdocs/24hourJS/lesson19/lesson19.html",
+		"/Applications/MAMP/htdocs/24hourJS/lesson18/lesson18.html",
+		"/Applications/MAMP/htdocs/24hourJS/lesson17/lesson17.html",
+		"/Applications/MAMP/htdocs/24hourJS/lesson15/lesson15.html",
+		"/Applications/MAMP/htdocs/24hourJS/lesson13-DOM/lesson13.html",
+		"/Applications/MAMP/htdocs/24hourJS/lesson14/lesson14.html",
+		"/Applications/MAMP/htdocs/24hourJS/lesson9-window-Object/lesson9.html",
+		"/Applications/MAMP/htdocs/24hourJS/lesson8-object/object.js",
+		"/Applications/MAMP/htdocs/24hourJS/lesson4/test.js",
+		"/Applications/MAMP/htdocs/24hourJS/lesson8-object/Test.html",
+		"/Applications/MAMP/htdocs/24hourJS/lesson4/test.html",
+		"/Applications/MAMP/htdocs/24hourJS/lesson8-object/employe.js",
+		"/Applications/MAMP/htdocs/24hourJS/lesson8-object/nodsong.txt",
+		"/Applications/MAMP/htdocs/24hourJS/initjs.js",
+		"/Applications/MAMP/htdocs/24hourJS/de.php",
+		"/Users/light/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"id",
+			"add_new_record",
+			"student_name",
+			"subject",
+			"test",
+			"xmlhttp",
+			"XMLHttp",
+			"xmlhttp",
+			"form",
+			"cmd",
+			"end",
+			"Cursors",
+			"type",
+			"=\"\">",
+			"__dirname=",
+			"__dirname",
+			"route",
+			"Home",
+			"descrip",
+			"\":\"\"",
+			">\n",
+			"5",
+			"aa",
+			"mois",
+			"index",
+			"total",
+			"months"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "data.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								478,
+								478
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								608,
+								608
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "aw.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								155,
+								155
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/light/Desktop/Notes /Sublime_text_workflow.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1690,
+								1690
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 565.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 73,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								73,
+								73
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.7,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 27.0
+	},
+	"output.xdebug":
+	{
+		"height": 112.0
+	},
+	"project": "aw.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"21":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"23":
+				{
+					"group": 0,
+					"index": 1
+				},
+				"71":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"80":
+				{
+					"group": 0,
+					"index": 3
+				},
+				"83":
+				{
+					"group": 0,
+					"index": 7
+				},
+				"84":
+				{
+					"group": 0,
+					"index": 4
+				},
+				"85":
+				{
+					"group": 0,
+					"index": 6
+				},
+				"86":
+				{
+					"group": 0,
+					"index": 5
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						2,
+						1
+					],
+					[
+						0,
+						1,
+						1,
+						2
+					],
+					[
+						1,
+						1,
+						2,
+						2
+					]
+				],
+				"cols":
+				[
+					0.0,
+					0.5,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					0.687612103726,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 142.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
